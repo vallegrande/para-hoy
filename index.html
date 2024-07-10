@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Registro de pacientes</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        function mostrarAlerta() {
+            Swal.fire({
+                title: 'Datos enviados correctamente',
+                icon: 'success',
+                confirmButtonText: 'Aceptar'
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <form method="post" id="MiFormulario" action="/guardar" onsubmit="mostrarAlerta()">
+            <h2>Formulario Registro de pacientes</h2>
+            <br>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <br><br>
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required>
+            <br><br>
+            <label for="dni">DNI:</label>
+            <input type="text" id="dni" name="dni" required>
+            <br><br>
+            <label for="fecha">Fecha de Nacimiento:</label>
+            <input type="date" id="fecha" name="fecha" required>
+            <br><br>
+            <label for="sexo">Sexo:</label>
+            <div class="radio_form">
+                <input type="radio" name="sexo" id="Hombre" value="Hombre" required>
+                <label for="Hombre">Hombre</label>
+            </div>
+            <div class="radio_form">
+                <input type="radio" name="sexo" id="Mujer" value="Mujer" required>
+                <label for="Mujer">Mujer</label>
+            </div>
+            <br><br>
+            <label for="celular">Celular:</label>
+            <input type="tel" name="celular" id="celular" required>
+            <br><br>
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" name="email" id="email" required>
+            <br><br>
+            <label for="direccion">Dirección:</label>
+            <input type="text" name="direccion" id="direccion" required>
+            <br><br>
+            <label for="colesterol">Colesterol:</label>
+            <input type="number" name="colesterol" id="colesterol" required>
+            <br><br>
+            <label for="glucosa">Glucosa:</label>
+            <input type="number" name="glucosa" id="glucosa" required>
+            <br><br>
+            <label for="hemoglobina">Hemoglobina:</label>
+            <input type="number" name="hemoglobina" id="hemoglobina" required>
+            <br><br>
+            <label for="tipo">Tipo de Seguro:</label>
+            <select name="tipo" id="tipo" required>
+                <option value="EsSalud">EsSalud</option>
+                <option value="Farmacia">Farmacia</option>
+                <option value="Clinica">Clinica</option>
+            </select>
+            <br><br>
+            <button class="btn_guardar" type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>

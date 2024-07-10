@@ -1,0 +1,21 @@
+{
+  "name": "registro_medico",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parse": "^0.1.0",
+    "debug": "^4.3.5",
+    "express": "^4.19.2",
+    "morgan": "^1.10.0",
+    "mysql2": "^3.10.2",
+    "path": "^0.12.7"
+  }
+}
